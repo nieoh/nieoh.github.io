@@ -25,14 +25,14 @@ hr.light {
 }
 
 a {
-    color: #96B1CE;
+    color: #67001a;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
 a:hover {
-    color: #cad8e6;
+    color: #800020;
 }
 a:focus {
     color: #cad8e6;
@@ -70,6 +70,10 @@ section {
     padding: 100px 0;
 }
 
+.food {
+    background-image: url(../img/galbi.jpg);
+
+}
 aside {
     padding: 50px 0;
 }
