@@ -25,7 +25,7 @@ hr.light {
 }
 
 a {
-    color: #67001a;
+    color: #ffffff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -71,9 +71,17 @@ section {
 }
 
 .food {
-    background-image: url(../img/galbi.jpg);
+    background-size: cover;
+    background-image: url(../img/editedmantaface.jpg);
 
 }
+
+
+.macrocalculator {
+    
+
+}
+
 aside {
     padding: 50px 0;
 }
@@ -184,7 +192,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/sky.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
