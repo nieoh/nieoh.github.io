@@ -143,7 +143,7 @@ Proident frankfurter shank, cupidatat consequat t-bone tenderloin prosciutto. Re
                                 } else {
                                     TDEE = (10*w + 6.25*h - 5*age -161)*stressFactor;
                                 }
-                                document.getElementById("result").innerHTML = TDEE;
+                                document.getElementById("result").innerHTML = TDEE.toPrecision(4);
 
                             };
                             // Calculate stress factor based off of # exercises per week
