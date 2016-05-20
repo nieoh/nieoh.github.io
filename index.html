@@ -112,12 +112,30 @@ Proident frankfurter shank, cupidatat consequat t-bone tenderloin prosciutto. Re
                     <div class="col-lg-offset-1 col-lg-5 text-left" >
                         <form>
                             First Name: <br>
-                            <input id = "numb"> <br>
+                            <input type = "text" id = "firstname"> <br>
                             Last Name: <br>
                             <input type = "text" id = "lastname"><br>
                             <button type="button" onclick="myFunction()">Submit</button><br>
                             <p id="demo"></p>
                         </form>
+                        <script>
+                            function myFunction() {
+                                var x, text;
+
+                                // Get the value of the input field with id="firstname"
+                                x = document.getElementById("firstname").value;
+
+                                // If x is Not a Number or less than one or greater than 10
+                                if (isNaN(x) || x < 1 || x > 10) {
+                                    text = "Input not valid";
+                                } else {
+                                    text = "Input OK";
+                                }
+                                document.getElementById("demo").innerHTML = text;
+
+                            };
+                        </script>
+
                     </div>
                 </div>
             </div>
