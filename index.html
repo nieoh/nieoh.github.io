@@ -57,7 +57,7 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h2 style="font-size: 140px; font-weight: 600; margin-top: 0px; margin-left: -160px"><font color = "ffffff" size ='100'>stepha</font><font color = 'ffffff'>NIEOH</font></h2>
-                <h2 style="margin-top: 100px"><a class = "page-scroll" href = "#about">DREAMER</a> - <a class = "page-scroll" href = "#BMR">CODER</a> - <a class = "page-scroll" href="#macros"><font color = "B0D1E4">IIFYMER</font></a></h2>
+                <h2 style="margin-top: 100px"><a class = "page-scroll" href = "#about">DREAMER</a> - <a class = "page-scroll" href = "#BMR">CODER</a> - <a class = "page-scroll" href="#tdee"><font color = "B0D1E4">IIFYMER</font></a></h2>
             </div>
         </div>
     </header>
@@ -93,10 +93,6 @@ Proident frankfurter shank, cupidatat consequat t-bone tenderloin prosciutto. Re
                     <div class="col-lg-0 col-sm-3 text-center"  style="padding-left: 0">
                         <!-- <iframe src="https://www.wolframcloud.com/objects/3350c273-3daf-4d6d-bada-658cf54689ab?_embed=iframe" width="600" height="600"></iframe>  -->
                     </div>
-                    <div class="col-lg-offset-4 col-lg-5 text-left" >
-                        <font color = "FFFFFF">
-                            The formula is based on body weight, which does not take into account the difference in metabolic activity between lean body mass and body fat. Other formulas exist which take into account lean body mass, two of which are the Katch-McArdle formula, and Cunningham formula. The Katch-McArdle formula is used to predict Resting Daily Energy Expenditure (RDEE). The Cunningham formula is used to predict RMR instead of BMR <br>--Wikipedia</font>    
-                </div>
                 
                 </div>
             </div>
@@ -104,7 +100,7 @@ Proident frankfurter shank, cupidatat consequat t-bone tenderloin prosciutto. Re
     </section>
 
 
-    <section id="macros" class="macrocalculator">
+    <section id="tdee" class="tdee">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -143,7 +139,7 @@ Proident frankfurter shank, cupidatat consequat t-bone tenderloin prosciutto. Re
                                 } else {
                                     TDEE = (10*w + 6.25*h - 5*age -161)*stressFactor;
                                 }
-                                document.getElementById("result").innerHTML = TDEE.toPrecision(4);
+                                document.getElementById("result").innerHTML = TDEE.toPrecision(6);
 
                             };
                             // Calculate stress factor based off of # exercises per week
@@ -164,6 +160,87 @@ Proident frankfurter shank, cupidatat consequat t-bone tenderloin prosciutto. Re
                             };
 
                         </script>
+                    </div>
+                    <div class="col-lg-offset-1 col-lg-5 text-left">
+                        The formula is based on body weight, which does not take into account the difference in metabolic activity between lean body mass and body fat. Other formulas exist which take into account lean body mass, two of which are the Katch-McArdle formula, and Cunningham formula. The Katch-McArdle formula is used to predict Resting Daily Energy Expenditure (RDEE). The Cunningham formula is used to predict RMR instead of BMR <br>--Wikipedia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="macros" class="macros">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading"><font color = "B0D1E4">Macro split</font></h1>
+                    <div class="col-lg-offset-1 col-lg-5 text-left" >
+                        Calculate your macro split based off percentage. Enter the percentage you wish to assign to proteins, carbs and fat so that it adds up to 100%. 
+                    <br>
+                    <p style="font-size:60%">
+                        For example, if you have 2000 calories to work with and want a macro split where 40% of the calories are from protein, 30% from carbs and 30% from fat, then fill out the following values in the form:<br>
+                        Calories: 2000 &nbsp;
+                             Protein: 40 &nbsp;
+                             Carbs: 30&nbsp;
+                             Fats: 30&nbsp;
+                    </p>
+                        <form>
+                            Calories: <br>
+                            <input id = "calories"><br>
+                            Protein (%): <br>
+                            <input id = "protein"><br>
+                            Carbs (%): <br>
+                            <input id = "carbs"><br>
+                            Fat (%): <br>
+                            <input id = "fat"><br>
+                            <button type="button" onclick="macroPercentage()">Submit</button><br>
+                            Macros: <p id="macros"></p>
+                        </form>
+                    </div>
+                    <script>
+                        function macroPercentage(){
+                            var cal, p, c, f, macros;
+
+                            //get variables from html
+                            cal = document.getElementById("calories").value;
+                            p = (document.getElementById("protein").value/100).toPrecision();
+                            c = (document.getElementById("carbs").value/100).toPrecision();
+                            f = (document.getElementById("fat").value/100).toPrecision();
+
+                            macros = [((cal*p)/4).toPrecision(4), ((cal*c)/4).toPrecision(4), ((cal*f)/4).toPrecision(4)]
+                            document.getElementById("macros").innerHTML = macros.1;
+
+                        }
+
+
+                    </script>
+<!-- add option to calculate calories based off TDEE -->
+<!-- //def macroPercentage(calories, protein, carb, fat):
+    p = math.ceil((calories * protein)/4)
+    f = math.floor((calories * fat)/9)
+    c = math.ceil((calories * carb)/4)
+    return [p, c, f] -->
+
+
+                    <div class="col-lg-offset-1 col-lg-5 text-left" >
+                        <form>
+                            Sex: <br>
+                            <input type = "radio" name = "sex" value="male" checked> Male<br>
+                            <input type = "radio" name = "sex" value="female"> Female<br>
+                            Age: <br>
+                            <input id = "age"><br>
+                            Weight (kg): <br>
+                            <input id = "weight"> <br>
+                            Height (cm): <br>
+                            <input id = "height"><br>
+                            Number of times you exercise per week: <br>
+                            <input id = "epw"> <br>
+                            <button type="button" onclick="mifflinStJoer()">Submit</button><br>
+                            TDEE: <p id="result"></p>
+                        </form>
+                        
 
                     </div>
                 </div>
