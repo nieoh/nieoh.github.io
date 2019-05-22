@@ -1,1 +1,58 @@
 This is a blog-biggity biggity big spoon
+
+
+May 21 2019
+
+The Master Plan 
+
+My dog is a good dog. She's really good at many commands, such as sit, down and stay. However, as my dog trainer always tells me, continuous practice makes for a successful dog. (Okay, I made that saying up, but the general sentiment is the same). 
+
+I am currently a data scientist. But I've worn many technical hats in the past, from pure mathematics to deep learning to app deployment. Most recently, I've decided to focus more on the predictive modeling and data analytics aspect of data science. Turns out, I'm not a huge fan of just that. Turns out, I like meddling with the backend code, and the deployment, and the modeling, and the front end, and really all of it. 
+
+So here I am, a generalist with one good dog. The plan is pretty simple:
+
+1) Purchase a treat dispensing camera (I briefly considered building something from scratch but then the chances of completing this project would be somewhere around 15%)
+
+2) Reverse engineer the treat dispensing camera's app to gain access to the API calls. (Gain access to the calls which dispense treats, takes photos, speaks commands)
+
+3) Train a model to detect when my dog is sitting (I may have to take many pictures of my dog in different positions, or find a data set, or maybe there already exists a pre-trained model with positions labeled... tbd) 
+
+4) Deploy the model and hook it up to some pipes so that it can make evaluations on photos sent by the API from 2) and subsequently make an API call to dispense treats when my dog is sitting. 
+
+5) Hardest of them all, teach my dog not to be terrified of this box that speaks and makes loud noises before shooting out a bunch of treats. 
+
+Meta step) Keep track of progress by, hopefully, frequently updating this blog. 
+
+Some things I hope to learn or achieve: 
+1) How to deploy an ml model and gain a better understanding of the technology involved 
+2) More experience with image-related deep learning models
+Bonus) How to reverse engineer an android app (MITM, etc)
+Extra Bonus) Improve my dog's skills on sitting / staying. 
+
+Some things I am concerned about:
+1) Not completing this project. I have yet to understand or spec out the technical details invovled with this project, and being a more long-term personal project, I can see myself getting distracted by other things. Hopefully this blog will keep me accountable. Also, I am hoping the breadth of the project (engineering challenges, ml challenges, devops challenges, etc) will allow me to bounce between different parallel tracks and keep me engaged when things get frustrating.  
+
+2) That's about it. 
+
+I am hoping to keep this blog updated about twice a week. I imagine the project and/or this blog will evolve as time goes on but for now, I'm going to try to strike a balance between readability, humor and technical details. 
+
+May 21 2019
+
+Choosing a Treat Dispenser 
+
+So step one of the project is to choose a treat dispensing camera to begin the project. There are about 8 such cameras out there if you do a cursory Google/ Amazon search. For the project, I wanted something on the cheaper end (I could spend $300 on this device but given the amount of money I've already spent on a dog-spying "security" system and treats, I couldn't justify spending that much more on another camera). There were a few options in the $50 range but either they didn't have all the features I wanted or the reviews simply said they just don't work. 
+
+Most of these cameras offer the same basic features, a mic, a camera, and an app / website to use. Some extra features I didn't need included, night vision, a paw-dialer[PetChatz] (in case my dog wanted to call me?), AI! [Furbo] (use AI to identify my dog and alert me when something else in the video changes!), always-on (as opposed to "turning on" when the app is open. I don't actually trust that the Russians are spying on me through the camera, but it's nice to at least pretend like it's not always on), etc. 
+
+The camera I ended up choosing was the Petzi Treat Cam. It comes with a mic, a camera, and an app to use. It claims not to be always on and while the reviews were mixed, it seemed workable for my use-case. One thing to note is that Petzi Cam has its own social network where people can post photos of their pets. I had mixed feelings about this since a lot of the reviews commented that they wished the creators would spend more time improving the basic features instead of building this social network. 
+
+I ordered the Petzi cam from Amazon and two prime days later, it had arrived. My first impression was that it was larger and clunkier than I had expected. I guess I never really checked the dimensions. Setting up the wifi connection and an account was surprisingly painless (especially after all the bad reviews I had read!) I loaded the dispenser with my dog's regular kibble and dispensed my first set of treats. It was extremely loud, and took about 4 seconds for the dispenser to "gear up" (at this point, my dog was terrified and ran away from the dispenser). Afterwards, it shot about 10-15 pieces in two separate spurts. Alright, not ideal, but still, workable. 
+
+Since the intial use, I've connected to the app a few more times. I have had some issues with the app loading or wifi connection but overall, it seems fine for my purposes. 
+
+TBD. 
+
+May 21 2019
+
+MITM
+
